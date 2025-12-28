@@ -14,7 +14,7 @@ export default function GalleryPage() {
     { src: "/gallery/D4.jpeg", alt: "Team Building" },
     { src: "/gallery/D1.jpeg", alt: "Workshop Activity" },
     { src: "/gallery/pic8.jpg", alt: "Student Wellness" },
-    { src: "/gallery/pic16.jpg", alt: "Parental Training Workshop" },
+    { src: "/gallery/pic16.jpg", alt: "Relaxing after workshop" },
     // ... add all your other pic references here
   ];
 
