@@ -1,6 +1,13 @@
 import Navbar from "../components/Navbar";
-import Footer from "../components/footer"; // Import the new Footer
+import Footer from "../components/footer";
 import "./globals.css";
+
+export const metadata = {
+  title: "Adolescents Wellness Africa",
+  icons: {
+    icon: "/logo.png",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -14,7 +21,7 @@ export default function RootLayout({
         <div className="flex-grow">
           {children}
         </div>
-        <Footer /> {/* Add the Footer here */}
+        <Footer />
       </body>
     </html>
   );
