@@ -9,12 +9,42 @@ export const metadata: Metadata = {
 
 export default function ProgramsPage() {
   const programs = [
-    { id: 1, title: "Adolescent-Based Mental Health Support", description: "Counselling services, psychosocial assessments, and referral systems for learners at risk." },
-    { id: 2, title: "Life Skills and Character Development", description: "Programs that build self-awareness, emotional regulation, responsibility, leadership, and resilience." },
-    { id: 3, title: "Values-Based Sexuality and Protection Education", description: "Age-appropriate education promoting self-respect, personal safety, and responsible decision-making." },
-    { id: 4, title: "Prevention and Early Intervention", description: "Addressing substance abuse, violence, bullying, radicalization, abuse, and school disengagement." },
-    { id: 5, title: "Capacity Building for Schools and Families", description: "Training teachers, parents, peer counsellors, and school leaders in adolescent wellness and safeguarding." },
-    { id: 6, title: "Monitoring, Evaluation, and Learning (MEL)", description: "Tracking psychosocial outcomes, behaviour change, and school climate improvement." },
+    {
+      id: 1,
+      title: "Adolescent-Based Mental Health Support",
+      description: "Counselling services, psychosocial assessments, and referral systems for learners at risk.",
+      href: "/programs/school-counselling",
+    },
+    {
+      id: 2,
+      title: "Life Skills and Character Development",
+      description: "Programs that build self-awareness, emotional regulation, responsibility, leadership, and resilience.",
+      href: "/programs/life-skills",
+    },
+    {
+      id: 3,
+      title: "Values-Based Sexuality and Protection Education",
+      description: "Age-appropriate education promoting self-respect, personal safety, and responsible decision-making.",
+      href: null,
+    },
+    {
+      id: 4,
+      title: "Prevention and Early Intervention",
+      description: "Addressing substance abuse, violence, bullying, radicalization, abuse, and school disengagement.",
+      href: null,
+    },
+    {
+      id: 5,
+      title: "Capacity Building for Schools and Families",
+      description: "Training teachers, parents, peer counsellors, and school leaders in adolescent wellness and safeguarding.",
+      href: "/programs/mental-health-awareness",
+    },
+    {
+      id: 6,
+      title: "Monitoring, Evaluation, and Learning (MEL)",
+      description: "Tracking psychosocial outcomes, behaviour change, and school climate improvement.",
+      href: null,
+    },
   ];
 
   return (
@@ -30,19 +60,44 @@ export default function ProgramsPage() {
 
       <section className="py-20 px-6 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {programs.map((program) => (
-            <div key={program.id} className="group p-8 bg-white border-2 border-slate-100 rounded-2xl shadow-sm hover:shadow-xl hover:border-blue-600 transition-all duration-300 flex flex-col items-start">
-              <h3 className="text-xl font-extrabold text-slate-900 mb-3 leading-tight group-hover:text-blue-700 transition-colors">
-                {program.title}
-              </h3>
-              <p className="text-slate-600 leading-relaxed mb-6">
-                {program.description}
-              </p>
-              <div className="mt-auto pt-4 border-t border-slate-50 w-full">
-                <span className="text-sm font-bold text-blue-600 uppercase tracking-widest">AWA Core Program</span>
+          {programs.map((program) => {
+            const CardInner = (
+              <>
+                <h3 className="text-xl font-extrabold text-slate-900 mb-3 leading-tight group-hover:text-blue-700 transition-colors">
+                  {program.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed mb-6">
+                  {program.description}
+                </p>
+                <div className="mt-auto pt-4 border-t border-slate-50 w-full flex items-center justify-between">
+                  <span className="text-sm font-bold text-blue-600 uppercase tracking-widest">
+                    AWA Core Program
+                  </span>
+                  {program.href && (
+                    <span className="text-sm font-bold text-blue-600 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                      Learn More
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  )}
+                </div>
+              </>
+            );
+
+            const cardClasses =
+              "group p-8 bg-white border-2 border-slate-100 rounded-2xl shadow-sm hover:shadow-xl hover:border-blue-600 transition-all duration-300 flex flex-col items-start";
+
+            return program.href ? (
+              <Link key={program.id} href={program.href} className={cardClasses}>
+                {CardInner}
+              </Link>
+            ) : (
+              <div key={program.id} className={cardClasses}>
+                {CardInner}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
