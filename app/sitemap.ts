@@ -1,9 +1,18 @@
-import type { MetadataRoute } from 'next';
-import { blogPosts } from "./app/lib/blogPosts";
+import type { MetadataRoute } from "next";
+import { blogPosts } from "./lib/blogPosts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.adolescentswellness-africa.org";
-  const routes = ["", "/about", "/programs", "/services", "/gallery", "/blog", "/contact"];
+
+  const routes = [
+    "",
+    "/about",
+    "/programs",
+    "/services",
+    "/gallery",
+    "/blog",
+    "/contact",
+  ];
 
   const staticRoutes: MetadataRoute.Sitemap = routes.map((route) => ({
     url: `${base}${route}`,
