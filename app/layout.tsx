@@ -25,9 +25,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.png",
   },
-  verification: {
-    google: "PASTE_YOUR_SEARCH_CONSOLE_CODE_HERE",
-  },
+  
 };
 
 export default function RootLayout({
@@ -63,14 +61,14 @@ export default function RootLayout({
         <div className="flex-grow">{children}</div>
         <Footer />
 
-        {/* Google Analytics — replace G-XXXXXXX with your real GA4 ID */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX" strategy="afterInteractive" />
+        {/* Google Analytics */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-5EGC3BYM2N" strategy="afterInteractive" />
         <Script id="ga4" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-XXXXXXX');
+            gtag('config', 'G-5EGC3BYM2N');
           `}
         </Script>
       </body>
