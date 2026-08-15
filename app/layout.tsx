@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.png",
   },
-  
 };
 
 export default function RootLayout({
@@ -35,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen">
+      <body className="flex flex-col min-h-screen bg-white text-slate-900 antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -57,8 +56,18 @@ export default function RootLayout({
             }),
           }}
         />
-        <Navbar />
-        <div className="flex-grow">{children}</div>
+
+        {/* 1. Navbar stays strictly at top */}
+        <header className="w-full z-50">
+          <Navbar />
+        </header>
+
+        {/* 2. Main content expands to push footer down */}
+        <main className="flex-1 w-full">
+          {children}
+        </main>
+
+        {/* 3. Footer strictly at the bottom */}
         <Footer />
 
         {/* Google Analytics */}

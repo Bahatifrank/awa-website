@@ -8,7 +8,19 @@ export const metadata: Metadata = {
   alternates: { canonical: "/programs" },
 };
 
-const programs = [
+type AccentType = "amber" | "blue";
+
+interface Program {
+  id: number;
+  title: string;
+  description: string;
+  bullets: string[];
+  image: string;
+  accent: AccentType;
+  icon: React.ReactNode;
+}
+
+const programs: Program[] = [
   {
     id: 1,
     title: "Adolescent-Based Mental Health Support",
@@ -17,7 +29,7 @@ const programs = [
     image: "/gallery/pic5.jpg",
     accent: "amber",
     icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M4.318 6.318a4.5 4.5 0 0 1 6.364 0L12 7.636l1.318-1.318a4.5 4.5 0 1 1 6.364 6.364L12 21l-7.682-8.318a4.5 4.5 0 0 1 0-6.364Z" />
       </svg>
     ),
@@ -30,7 +42,7 @@ const programs = [
     image: "/gallery/pic11.jpg",
     accent: "blue",
     icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
       </svg>
     ),
@@ -43,7 +55,7 @@ const programs = [
     image: "/gallery/pic13.jpg",
     accent: "amber",
     icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12.75 11.25 15 15 9.75M21 12c0 4.556-3.04 8.325-7.19 9.542a1.99 1.99 0 0 1-1.62 0C7.04 20.325 4 16.556 4 12V6.741a1.5 1.5 0 0 1 1.5-1.5h.5a5.5 5.5 0 0 0 4.5-2.25 5.5 5.5 0 0 0 4.5 2.25h.5a1.5 1.5 0 0 1 1.5 1.5V12Z" />
       </svg>
     ),
@@ -56,7 +68,7 @@ const programs = [
     image: "/gallery/D2.jpeg",
     accent: "blue",
     icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
       </svg>
     ),
@@ -69,7 +81,7 @@ const programs = [
     image: "/gallery/D4.jpeg",
     accent: "amber",
     icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
       </svg>
     ),
@@ -82,7 +94,7 @@ const programs = [
     image: "/gallery/pic20.jpg",
     accent: "blue",
     icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
       </svg>
     ),
@@ -90,13 +102,13 @@ const programs = [
 ];
 
 const stats = [
-  { value: "TBD", label: "Adolescents Reached" },
-  { value: "TBD", label: "Partner Schools" },
-  { value: "TBD", label: "Trained Facilitators" },
-  { value: "TBD", label: "Counselling Sessions" },
+  { value: "1,000+", label: "Adolescents Reached" },
+  { value: "10+", label: "Partner Schools" },
+  { value: "50+", label: "Trained Facilitators" },
+  { value: "200+", label: "Counselling Sessions" },
 ];
 
-function accentClasses(accent: "amber" | "blue") {
+function accentClasses(accent: AccentType) {
   return accent === "amber"
     ? { border: "border-amber-200", iconBg: "bg-amber-50", iconText: "text-amber-600", check: "text-amber-500" }
     : { border: "border-blue-200", iconBg: "bg-blue-50", iconText: "text-blue-600", check: "text-blue-600" };
@@ -108,7 +120,7 @@ export default function ProgramsPage() {
       {/* Header */}
       <section className="bg-blue-900 py-20 px-6 text-white text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight">Our Programs</h1>
-        <div className="w-20 h-1 bg-amber-400 mx-auto mb-6"></div>
+        <div className="w-20 h-1 bg-amber-400 mx-auto mb-6" aria-hidden="true" />
         <p className="max-w-2xl mx-auto text-blue-100 text-lg">
           Evidence-based interventions designed to foster resilience and mental
           well-being in schools and communities across Africa.
@@ -118,14 +130,14 @@ export default function ProgramsPage() {
       {/* Alternating Program Blocks */}
       <section className="py-20 px-6 max-w-6xl mx-auto space-y-24">
         {programs.map((program, idx) => {
-          const c = accentClasses(program.accent as "amber" | "blue");
+          const c = accentClasses(program.accent);
           const imageFirst = idx % 2 === 0;
           const rotate = idx % 2 === 0 ? "-rotate-2" : "rotate-2";
 
           return (
             <div
               key={program.id}
-              className={`grid md:grid-cols-2 gap-12 md:gap-16 items-center`}
+              className="grid md:grid-cols-2 gap-12 md:gap-16 items-center"
             >
               {/* Image */}
               <div className={imageFirst ? "md:order-1" : "md:order-2"}>
@@ -158,7 +170,7 @@ export default function ProgramsPage() {
                 <ul className="space-y-3 mb-8">
                   {program.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-center gap-3">
-                      <svg className={`w-5 h-5 shrink-0 ${c.check}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className={`w-5 h-5 shrink-0 ${c.check}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <circle cx="12" cy="12" r="9" strokeWidth={1.8} />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="m9 12 2 2 4-4" />
                       </svg>
@@ -168,7 +180,7 @@ export default function ProgramsPage() {
                 </ul>
                 <Link
                   href="/contact"
-                  className="inline-block bg-blue-900 hover:bg-blue-800 text-white px-7 py-3 rounded-full font-bold transition-colors shadow-md"
+                  className="inline-block bg-blue-900 hover:bg-blue-800 text-white px-7 py-3 rounded-full font-bold transition-colors shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                 >
                   Support This Program
                 </Link>
@@ -200,7 +212,7 @@ export default function ProgramsPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-amber-500 hover:bg-amber-400 text-blue-950 px-10 py-4 rounded-full font-black uppercase tracking-widest transition-all shadow-lg hover:scale-105 active:scale-95"
+            className="inline-block bg-amber-500 hover:bg-amber-400 text-blue-950 px-10 py-4 rounded-full font-black uppercase tracking-widest transition-all shadow-lg hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2"
           >
             Partner With Us
           </Link>
