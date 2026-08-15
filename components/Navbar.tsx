@@ -39,6 +39,7 @@ export default function Navbar() {
             <Link href="/programs" className="hover:text-blue-600 transition">Programs</Link>
             <Link href="/services" className="hover:text-blue-600 transition">Services</Link>
             <Link href="/gallery" className="hover:text-blue-600 transition">Gallery</Link>
+            <Link href="/blog" className="hover:text-blue-600 transition">Blog</Link>
             <Link href="/contact" className="hover:text-blue-600 transition">Contact</Link>
           </div>
           <Link href="/contact" className="bg-blue-800 text-white px-5 py-2.5 rounded-xl font-bold text-sm">
@@ -70,6 +71,7 @@ export default function Navbar() {
             <Link href="/programs" onClick={() => setIsOpen(false)}>Programs</Link>
             <Link href="/services" onClick={() => setIsOpen(false)}>Services</Link>
             <Link href="/gallery" onClick={() => setIsOpen(false)}>Gallery</Link>
+            <Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
             <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           </div>
           <Link 
