@@ -24,6 +24,7 @@ const photos = [
   { src: "/gallery/pic20.jpg", alt: "Adolescents engaged in an AWA resilience-building exercise" },
   { src: "/gallery/pic21.jpg", alt: "AWA mentorship session photo from a school visit" },
   { src: "/gallery/pic22.jpg", alt: "AWA team facilitating a values-based education session" },
+  { src: "/gallery/11(2).jpeg", alt: "Adolescents taking part in an AWA workshop activity" },
   { src: "/gallery/pic23.jpg", alt: "Adolescents participating in an AWA prevention program activity" },
   { src: "/gallery/pic24.jpg", alt: "AWA gallery photo from a community wellness event" },
   { src: "/gallery/pic25.jpg", alt: "AWA mentorship session with secondary school students" },
@@ -35,6 +36,8 @@ const photos = [
   { src: "/gallery/D5.jpeg", alt: "AWA counselling session with an adolescent participant" },
   { src: "/gallery/D4.jpeg", alt: "AWA team building activity with program participants" },
   { src: "/gallery/D1.jpeg", alt: "Adolescents taking part in an AWA workshop activity" },
+  { src: "/gallery/11(1).jpeg", alt: "Adolescents taking part in an AWA workshop activity" },
+
 ];
 
 export default function GalleryClient() {
