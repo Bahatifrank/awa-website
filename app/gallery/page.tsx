@@ -24,7 +24,7 @@ const photos = [
   { src: "/gallery/pic20.jpg", alt: "Adolescents engaged in an AWA resilience-building exercise" },
   { src: "/gallery/pic21.jpg", alt: "AWA mentorship session photo from a school visit" },
   { src: "/gallery/pic22.jpg", alt: "AWA team facilitating a values-based education session" },
-  { src: "/gallery/bb.jpeg", alt: "the mentor spending time with the senior football team" },
+  { src: "/gallery/q2.jpeg", alt: "the mentor spending time with the senior football team" },
   { src: "/gallery/pic23.jpg", alt: "Adolescents participating in an AWA prevention program activity" },
   { src: "/gallery/pic24.jpg", alt: "AWA gallery photo from a community wellness event" },
   { src: "/gallery/pic25.jpg", alt: "AWA mentorship session with secondary school students" },
