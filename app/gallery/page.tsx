@@ -36,7 +36,7 @@ const photos = [
   { src: "/gallery/D5.jpeg", alt: "AWA counselling session with an adolescent participant" },
   { src: "/gallery/D4.jpeg", alt: "AWA team building activity with program participants" },
   { src: "/gallery/D1.jpeg", alt: "Adolescents taking part in an AWA workshop activity" },
-  { src: "/gallery/aa.jpeg", alt: "having fun during community work with a football team" },
+  { src: "/gallery/q1.jpeg", alt: "having fun during community work with a football team" },
 
 ];
 
